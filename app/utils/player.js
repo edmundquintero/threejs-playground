@@ -61,7 +61,6 @@ function Player(opts){
     
   }
 
-
   function checkForPointerLock() {
     return 'pointerLockElement' in document || 
            'mozPointerLockElement' in document || 
