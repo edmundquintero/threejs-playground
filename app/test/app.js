@@ -16,7 +16,7 @@
 
   function init() {
     scene = new THREE.Scene();
-    camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 1, 1000);
+    camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 1, 10000);
     camera.position.y = 100;
     camera.position.z = 100;
     
@@ -44,9 +44,9 @@
   function createFloor() {
     geometry = new THREE.PlaneGeometry(5000, 5000, 5, 5);
     geometry.applyMatrix(new THREE.Matrix4().makeRotationX(- Math.PI/2));
-    var texture = THREE.ImageUtils.loadTexture('textures/grass2.png');
+    var texture = THREE.ImageUtils.loadTexture('textures/water1.jpg');
     texture.wrapS = texture.wrapT = THREE.RepeatWrapping;
-    texture.repeat.set(128, 128);
+    texture.repeat.set(50, 50);
     material = new THREE.MeshBasicMaterial({ color: 0xffffff, map: texture });
     return new THREE.Mesh(geometry, material);
   }
@@ -149,7 +149,7 @@
   function updateControls() {
     if (controlsEnabled) {
       var delta = clock.getDelta();
-      var walkingSpeed = 800.0;
+      var walkingSpeed = 1200.0;
 
       velocity.x -= velocity.x * 10.0 * delta;
       velocity.z -= velocity.z * 10.0 * delta;
