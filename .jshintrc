@@ -19,9 +19,6 @@
   "eqnull": true,
 
   "globals": {
-    "angular": true,
-    "Packery": true,
-    "Draggabilly": true,
     "THREE": true
   }  
 }
