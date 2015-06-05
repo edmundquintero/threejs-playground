@@ -1,5 +1,7 @@
 'use strict';
 
+ /* global Player */ 
+
 (function() {
 
   var scene, camera, renderer;

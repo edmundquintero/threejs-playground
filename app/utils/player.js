@@ -1,5 +1,5 @@
 'use strict';
-
+/* exported Player */
 function Player(opts){
   var self = this;
 
@@ -22,8 +22,8 @@ function Player(opts){
   } else {
     console.warn('No renderer passed Player creating new renderer');
     self.renderer = new THREE.WebGLRenderer();
-    renderer.setSize(window.innerWidth, window.innerHeight);
-    document.body.appendChild(renderer.domElement);
+    self.renderer.setSize(window.innerWidth, window.innerHeight);
+    document.body.appendChild(self.renderer.domElement);
   }
 
   var controls, controlsEnabled;
@@ -45,7 +45,7 @@ function Player(opts){
     requestAnimationFrame(self.animate);
     updateControls();
     self.renderer.render(self.scene, self.camera);
-  }
+  };
 
   function init(){
 
@@ -184,6 +184,6 @@ function Player(opts){
   
   return {
     go: self.go
-  }
+  };
 
 }
