@@ -1,5 +1,4 @@
-
-
+'use strict';
 
 var demo = new Demo();
 demo.init(8);
@@ -9,13 +8,13 @@ demo.animate();
 function Demo(){
 
 	var camera, scene, renderer,
-	    geometry, material, mesh,
-	    self = this;
+	    geometry, material;
+	var self = this;
 	self.num = 0;
 	self.objs = {};
 
 	self.init = function(num) {
-		if (num) {self.num = num}
+		if (num) {self.num = num;}
 
 		// camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 1, 2000);
 		camera = new THREE.OrthographicCamera( window.innerWidth / - 2, window.innerWidth / 2, window.innerHeight / 2, window.innerHeight / - 2, 1, 2000 );
@@ -46,7 +45,7 @@ function Demo(){
 
 		document.body.appendChild(renderer.domElement);
 
-	}
+	};
 
 	self.animate = function(){
 		requestAnimationFrame(self.animate);
@@ -64,11 +63,11 @@ function Demo(){
 			}
 		}
 		renderer.render(scene, camera);
-	}
+	};
 
 	return {
 		init: self.init,
 		animate: self.animate
-	}
+	};
 
 }

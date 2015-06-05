@@ -1,5 +1,8 @@
+'use strict';
+
 var camera, scene, renderer;
-var geometry, material, mesh;
+var geometry, geometry2, material, mesh, mesh2;
+var widthSegments, heightSegments, depthSegments;
 
 init();
 animate();

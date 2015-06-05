@@ -1,3 +1,5 @@
+'use strict';
+
 var camera, scene, renderer;
 var geometry, material, mesh;
 
@@ -28,7 +30,7 @@ function init() {
 
 function animate() {
 	requestAnimationFrame(animate);
-  
+
 	mesh.rotation.y = Date.now() * 0.0004;
 
 	renderer.render(scene, camera);
