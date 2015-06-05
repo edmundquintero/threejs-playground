@@ -1,0 +1,10 @@
+{
+  "name": "temp",
+  "version": "1.0.0",
+  "dependencies": {
+    "threejs": ""
+  },
+  "resolutions": {
+    "threejs": "r55"
+  }
+}
