@@ -2,9 +2,7 @@
   "name": "temp",
   "version": "1.0.0",
   "dependencies": {
-    "threejs": ""
-  },
-  "resolutions": {
-    "threejs": "r55"
+    "threejs": "r55",
+    "bootstrap": "~3.3.4"
   }
 }
