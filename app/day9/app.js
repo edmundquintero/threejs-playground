@@ -25,13 +25,15 @@
     camera.position.y = 500;
     camera.position.z = 800;
 
-    renderer = new THREE.WebGLRenderer();
+    renderer = new THREE.WebGLRenderer({
+      antialias: true
+    });
     renderer.setSize(window.innerWidth, window.innerHeight);
     document.body.appendChild(renderer.domElement);
   }
 
   function setupCity(numBuildings){
-    
+
     ambiance();
 
     // Floor
